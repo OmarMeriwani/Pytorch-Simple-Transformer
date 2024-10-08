@@ -16,6 +16,8 @@ x_nums = np.random.rand(seq_size) * (vocab_size - 2)  # Not Used
 y_nums = np.random.rand(seq_size) * (vocab_size - 2)
 z_nums = np.random.rand(seq_size) * (vocab_size - 2)  # Not Used
 
+print(x_nums)
+
 x = np.zeros((seq_size))
 y = np.zeros((seq_size))
 z = np.zeros((seq_size))
@@ -26,10 +28,13 @@ for idx, item in enumerate(y_nums):
 for idx, item in enumerate(z_nums):
     z[idx] = abs(int(item)) + 1
 
+print (x)
+
 x = torch.from_numpy(x).type(torch.LongTensor)
 y = torch.from_numpy(y).type(torch.LongTensor)
 z = torch.from_numpy(z).type(torch.LongTensor)
 
+print (x)
 
 import matplotlib.pyplot as plt
 
